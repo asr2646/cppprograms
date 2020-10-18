@@ -1,12 +1,46 @@
 #include<iostream>
-using namespace std;
-int main() {
-	int num,factorial=1;
-	cout<<" Enter Number To Find Its Factorial:  ";
-	cin>>num;
-	for (int a=1;a<=num;a++) {
-		factorial=factorial*a;
-	}
-	cout<<"Factorial of Given Number is ="<<factorial<<endl;
-	return 0;
+using namespace std; 
+class factorial
+{
+    int n,n1,f=1;
+        public:
+            void input();
+            void calc();
+            void display();
+};
+ 
+void factorial::input()
+{
+    cout<<"\nEnter any number : ";
+    cin>>n;
+}
+ 
+void factorial::calc()
+{
+    n1=n;
+    if(n==0||n==1)
+    cout<<"\nFactorial of "<<n<<" is  1\n";
+    else
+    {
+        while(n>0)
+        {
+            f=f*n;
+            n--;
+        }
+    }
+ 
+}
+ 
+void factorial::display()
+{
+   cout<<"\nFactorial of "<<n1<<" is "<<f<<"\n";
+}
+ 
+int main ()
+{
+    factorial f;
+    f.input();
+    f.calc();
+    f.display();
+    return 0;
 }
